@@ -11,7 +11,6 @@ import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
-import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
 public class Project {
