@@ -1,0 +1,19 @@
+# Maven clean package:
+
+# mvn clean package docker:build (not worked)
+
+# worked solution
+
+mvn clean package
+
+# Docker image build:
+
+docker image build -t pm_backend .
+
+# Docker container build:
+
+docker container run -p 80:8080 -t pm_backend
+
+docker container run -d -p 80:8080 --network pm-network --name pm_backend pm_backend
+
+
