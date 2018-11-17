@@ -16,7 +16,7 @@ import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 @Component
-@Profile({"prod", "dev"})
+@Profile({"dev"})
 public class ProjectsLoader implements CommandLineRunner {
 
   private final Logger logger = LoggerFactory.getLogger(ProjectsLoader.class);
