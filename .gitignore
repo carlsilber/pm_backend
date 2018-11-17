@@ -8,6 +8,7 @@ dockerfile
 docker-compose.yaml
 make-docker-image
 is_made
+*.properties
 
 ######################
 # Node
