@@ -7,6 +7,7 @@ import com.carlsilber.pm_backend.exceptions.ProjectNotFoundException;
 import com.carlsilber.pm_backend.repositories.BacklogRepository;
 import com.carlsilber.pm_backend.repositories.ProjectRepository;
 import com.carlsilber.pm_backend.repositories.ProjectTaskRepository;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -92,8 +93,10 @@ public class ProjectTaskService {
     projectTask = updatedTask;
     return projectTaskRepository.save(projectTask);
   }
-  //Update project task
-  //find existing project task
-  //replace it with updated task
-  //save update
+
+  public void deletePTByProjectSequence(String backlog_id, String pt_id){
+    ProjectTask projectTask = findPTByProjectSequence(backlog_id, pt_id);
+    projectTaskRepository.delete(projectTask);
+  }
+
 }
