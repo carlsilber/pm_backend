@@ -72,4 +72,13 @@ public class DBConfiguration {
     System.out.println(url);
     return "DB Connection to RDS_PROD - High Performance Instance";
   }
+
+  @Profile("dev-h2")
+  @Bean
+  public String devH2DatabaseConnection() {
+    System.out.println("*** DB Connection to h2 - Low Performance Instance ***");
+    //System.out.println(driverClassName);
+    //System.out.println(url);
+    return "DB Connection to H2_DEV - Low Performance Instance";
+  }
 }
